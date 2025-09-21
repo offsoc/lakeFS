@@ -12,11 +12,11 @@ search:
     Available in **lakeFS Cloud** and **lakeFS Enterprise**<br/>
 
 Secure Token Service (STS) authentication in lakeFS enables users to authenticate to lakeFS using temporary credentials obtained from an Identity Provider (IdP) via the OpenID Connect (OIDC) Authentication workflow.
-This document outlines the process of setting up the STS authentication flow and using the temporary credentials to interact with lakeFS through the [high-level Python SDK](../integrations/python.md).
+This document outlines the process of setting up the STS authentication flow and using the temporary credentials to interact with lakeFS through the [high-level Python SDK](../integrations/python/sdk.md).
 
 ## Login
 
-Initiate a client session with temporary credentials using the [high-level Python SDK](../integrations/python.md):
+Initiate a client session with temporary credentials using the [high-level Python SDK](../integrations/python/sdk.md):
 
 ```python
 import lakefs

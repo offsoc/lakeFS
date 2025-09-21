@@ -215,7 +215,11 @@ nav:
       - Apache Airflow: integrations/airflow.md
       - Airbyte: integrations/airbyte.md
     - Dev & Tools:
-      - Python: integrations/python.md
+      - Python:
+        - Overview: integrations/python/index.md
+        - High-Level SDK: integrations/python/sdk.md
+        - lakefs-spec: integrations/python/lakefs-spec.md
+        - Boto (S3 Gateway): integrations/python/boto.md
       - AWS CLI: integrations/aws_cli.md
       - Git: integrations/git.md
       - R: integrations/r.md

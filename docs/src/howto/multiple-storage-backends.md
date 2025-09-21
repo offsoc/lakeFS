@@ -336,7 +336,7 @@ In a multi-storage setup, users must specify a storage ID when creating a reposi
     Use the `storage_id` parameter in the [Create Repository endpoint](../reference/api.md#/repositories/createRepository).
 
 === "High-Level Python SDK"
-    Starting from version 0.9.0 of the [High-level Python SDK](../integrations/python.md#using-the-lakefs-sdk),
+    Starting from version 0.9.0 of the [High-level Python SDK](../integrations/python/sdk.md),
     you can use `kwargs` to pass `storage_id` dynamically when calling the [create repository method](https://pydocs-lakefs.lakefs.io/lakefs.repository.html#lakefs.repository.Repository.create):
 
     ```python

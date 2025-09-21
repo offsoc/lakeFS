@@ -183,7 +183,7 @@ The `data_user` column in each log represents the user id that performed it.
 
 * It might be empty in cases where authentication is not required (e.g login attempt).
 * If the user is an API user created internally in lakeFS that id is also the name it was given.
-* `data_user` might contain an ID to an external IdP (i.e. SSO system), usually it is not human friendly, we can correlate the ID to a lakeFS email used, see an example using the [Python lakefs-sdk](../integrations/python.md#using-the-lakefs-sdk).
+* `data_user` might contain an ID to an external IdP (i.e. SSO system), usually it is not human friendly, we can correlate the ID to a lakeFS email used, see an example using the [Python lakefs-sdk](../integrations/python/sdk.md).
 
 ```python
 import lakefs_sdk
