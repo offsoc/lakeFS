@@ -11,6 +11,7 @@ use_directory_urls: true
 watch:
   - overrides
 extra_css:
+  - css/mkdocstrings.css
   - assets/css/overrides.css
 
 # Material theme settings
@@ -108,6 +109,32 @@ plugins:
       allow_arbitrary_locations : true
   - meta
   - glightbox
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["../clients/python", "../clients/python-wrapper"]
+          options:
+            docstring_style: "sphinx"
+            show_source: false
+            show_source_link: false
+            show_bases: true
+            show_inheritance_diagram: false
+            merge_init_into_class: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            separate_signature: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            show_category_heading: true
+            group_by_category: true
+            members_order: "alphabetical"
+            docstring_section_style: "table"
+            annotations_path: "brief"
+            show_if_no_docstring: false
+            show_labels: true
+            filters:
+              - "!^_"
+              - "!^__"
   - redirects:
       redirect_maps:
         reference/mount-csi-driver.md: reference/mount.md#mount-csi-driver-everest-on-kubernetes
@@ -218,6 +245,8 @@ nav:
       - Python:
         - Overview: integrations/python/index.md
         - High-Level SDK: integrations/python/sdk.md
+        - High-Level SDK API Reference: integrations/python/high-level-api-reference.md
+        - Generated SDK API Reference: integrations/python/api-reference.md
         - lakefs-spec: integrations/python/lakefs-spec.md
         - Boto (S3 Gateway): integrations/python/boto.md
       - AWS CLI: integrations/aws_cli.md

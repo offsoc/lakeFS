@@ -1,0 +1,396 @@
+/* Enhanced mkdocstrings styling */
+
+/* Fix code block spacing issues */
+.doc-signature {
+  font-family: var(--md-code-font) !important;
+  background-color: var(--md-code-bg-color) !important;
+  border-radius: 0.3em !important;
+  border-left: 3px solid var(--md-accent-fg-color) !important;
+  font-size: 0.9em !important;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+
+/* Color-coded type indicators */
+.doc-kind-attribute {
+  background-color: rgba(149, 56, 0, 0.1) !important;
+  color: rgb(149, 56, 0) !important;
+  padding: 0.1em 0.3em !important;
+  border-radius: 0.2em !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+}
+
+.doc-kind-method,
+.doc-kind-function {
+  background-color: rgba(130, 80, 223, 0.1) !important;
+  color: rgb(130, 80, 223) !important;
+  padding: 0.1em 0.3em !important;
+  border-radius: 0.2em !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+}
+
+.doc-kind-class {
+  background-color: rgba(33, 150, 243, 0.1) !important;
+  color: rgb(33, 150, 243) !important;
+  padding: 0.1em 0.3em !important;
+  border-radius: 0.2em !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+}
+
+.doc-kind-property {
+  background-color: rgba(255, 152, 0, 0.1) !important;
+  color: rgb(255, 152, 0) !important;
+  padding: 0.1em 0.3em !important;
+  border-radius: 0.2em !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+}
+
+/* Method/function headings - reduced spacing */
+.doc-heading {
+  margin-top: 1.5em !important;
+  margin-bottom: 0.8em !important;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* First heading in a section */
+.doc-heading:first-child {
+  margin-top: 0 !important;
+}
+
+/* Reduce spacing for doc objects */
+.doc-object {
+  margin-bottom: 1.5em !important;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.doc-object:last-child {
+  border-bottom: none;
+}
+
+/* API class headings */
+.doc-object-heading {
+  background-color: var(--md-default-bg-color--light);
+  padding: 1em;
+  margin: 1.5em 0 1em 0;
+  border-radius: 0.5em;
+  border-left: 5px solid var(--md-primary-fg-color);
+}
+
+/* Enhanced parameter tables to match mkdocstrings reference */
+.doc-parameters {
+  margin: 1em 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.doc-parameters table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.doc-parameters th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.8em;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.doc-parameters td {
+  padding: 0.8em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.doc-parameters td:first-child {
+  font-family: var(--md-code-font);
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+  white-space: nowrap;
+}
+
+/* Parameter type styling */
+.doc-parameters .doc-parameter-annotation {
+  font-family: var(--md-code-font);
+  background-color: var(--md-code-bg-color);
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+  font-size: 0.85em;
+  color: var(--md-accent-fg-color);
+}
+
+/* Parameter names */
+.doc-parameter-name {
+  font-family: var(--md-code-font);
+  font-weight: 600;
+  color: var(--md-accent-fg-color);
+}
+
+/* Return type styling */
+.doc-returns {
+  margin-top: 1em;
+  padding: 0.8em;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.3em;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* Source code links */
+.doc-source-link {
+  font-size: 0.8em;
+  opacity: 0.8;
+  float: right;
+  margin-left: 1em;
+  padding: 0.2em 0.5em;
+  background-color: var(--md-default-fg-color--lightest);
+  border-radius: 0.2em;
+  text-decoration: none;
+}
+
+.doc-source-link:hover {
+  opacity: 1;
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+/* Docstring descriptions */
+.doc-md-description {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.doc-md-description p:first-child {
+  margin-top: 0;
+}
+
+.doc-md-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Code blocks in docstrings - reduced spacing */
+.doc-md-description pre {
+  margin: 0.5em 0 !important;
+  padding: 0.6em !important;
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.3em;
+  border-left: 3px solid var(--md-accent-fg-color);
+  overflow-x: auto;
+  line-height: 1.3;
+}
+
+/* Reduce excessive spacing around code elements */
+.doc-contents pre {
+  margin: 0.5em 0 !important;
+  padding: 0.6em !important;
+}
+
+/* Fix spacing for highlighted code blocks */
+.highlight {
+  margin: 0.5em 0 !important;
+}
+
+.highlight pre {
+  margin: 0 !important;
+  padding: 0.6em !important;
+}
+
+/* Inline code in docstrings */
+.doc-md-description code {
+  background-color: var(--md-code-bg-color);
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+  font-size: 0.9em;
+}
+
+/* Member grouping */
+.doc-children {
+  margin-left: 0;
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Method grouping within API classes */
+.doc-category {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.doc-category:first-child {
+  margin-top: 1em;
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Improve spacing for nested content */
+.doc-contents {
+  margin-left: 0;
+}
+
+/* Better table styling */
+.doc-contents table {
+  width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+
+.doc-contents table th {
+  background-color: var(--md-default-fg-color--lighter);
+  padding: 0.8em;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--md-default-fg-color--light);
+}
+
+.doc-contents table td {
+  padding: 0.8em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+}
+
+.doc-contents table td code {
+  word-break: normal !important;
+  background-color: var(--md-code-bg-color);
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+}
+
+/* Collapsible sections with better styling */
+.doc-contents details {
+  margin: 1em 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+
+.doc-contents summary {
+  cursor: pointer;
+  padding: 0.8em 1em;
+  font-weight: 600;
+  background-color: var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--light);
+}
+
+.doc-contents summary:hover {
+  background-color: var(--md-accent-fg-color--transparent);
+}
+
+.doc-contents details[open] summary {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+.doc-contents details > :not(summary) {
+  padding: 1em;
+}
+
+/* Type annotations */
+.doc-signature .doc-signature-annotation {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Deprecation warnings */
+.doc-deprecated {
+  opacity: 0.7;
+  position: relative;
+}
+
+.doc-deprecated::before {
+  content: "DEPRECATED";
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  font-size: 0.7em;
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+/* Better visual hierarchy */
+.doc-object {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.doc-object:last-child {
+  border-bottom: none;
+}
+
+/* Symbol type indicators */
+.doc-symbol-type {
+  font-size: 0.8em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+
+.doc-symbol-type-method {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.doc-symbol-type-class {
+  background-color: #2196F3;
+  color: white;
+}
+
+.doc-symbol-type-property {
+  background-color: #FF9800;
+  color: white;
+}
+
+/* "Used by" and "Returned by" sections styling */
+.doc-section-used-by,
+.doc-section-returned-by {
+  margin: 1em 0;
+  padding: 0.8em;
+  background-color: var(--md-default-bg-color--light);
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 0.3em;
+}
+
+.doc-section-used-by h4,
+.doc-section-returned-by h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 0.9em;
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+.doc-section-used-by ul,
+.doc-section-returned-by ul {
+  margin: 0;
+  padding-left: 1em;
+  list-style: none;
+}
+
+.doc-section-used-by li,
+.doc-section-returned-by li {
+  margin: 0.3em 0;
+  position: relative;
+}
+
+.doc-section-used-by li::before,
+.doc-section-returned-by li::before {
+  content: "↳";
+  position: absolute;
+  left: -1em;
+  color: var(--md-accent-fg-color);
+  font-weight: bold;
+}
